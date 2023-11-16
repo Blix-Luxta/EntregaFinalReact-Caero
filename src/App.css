@@ -21,7 +21,12 @@
   overflow-y: auto;
 }
 
+.itemCard{
+  margin: 8px;
+}
+
 .itemCardImage{
   height: 250px !important;
   object-fit: scale-down;
 }
+
