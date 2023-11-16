@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { List, Image, Card, Typography, Rate, Button, message, Spin} from "antd"
-import { addToCart, getProductsByCategory } from "../API";
+import { List, Image, Card, Typography, Rate, Spin} from "antd"
+import { getProductsByCategory } from "../API";
 import { useParams } from "react-router-dom";
+import AddToCardButton from "../AddToCartButton";
 
 function Products() {
     const [loading, setLoading] = useState(false)
@@ -34,19 +35,6 @@ function Products() {
 
 }
 
-function AddToCardButton({item}){
-    const [loading, setLoading] = useState(false)
 
-    const addProductToCart= () =>{
-        setLoading(true)
-        addToCart(item.id).then(res=>{
-            message.success(`${item.title} has been added to cart!`)
-        setLoading(false)
-
-        })
-    }
-
-    return <Button type="link" onClick={addProductToCart} loading={loading}> Add to Cart</Button>
-}
 
 export default Products

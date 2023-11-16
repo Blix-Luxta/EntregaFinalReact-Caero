@@ -1,7 +1,9 @@
+import ItemListContainer from "../../ItemListContainer/Index"
+
 function Home() {
-    return (<div>
-        Home
-    </div>)
+    return (
+        <ItemListContainer/>
+    )
 }
 
 export default Home

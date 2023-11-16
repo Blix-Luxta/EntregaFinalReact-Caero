@@ -26,3 +26,11 @@ export function getProductsByCategory(category){
     .then(res=>res.json()))
 
 }
+
+
+export function getAllProducts(){
+
+  return fetch('https://dummyjson.com/products')
+  .then(res => res.json())
+
+}
