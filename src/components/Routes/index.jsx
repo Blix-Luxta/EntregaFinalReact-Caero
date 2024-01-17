@@ -8,7 +8,7 @@ function AppRoutes() {
         <Route exact path="/" element={<Home/>}></Route>
         <Route exact path="/home" element={<Home/>}></Route>
         <Route exact path="/:categoryId" element={<Category />}></Route>
-        <Route exact path='*' element={<h1>404 NOT FOUND</h1>}/>
+        <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
     </Routes>
 }
 

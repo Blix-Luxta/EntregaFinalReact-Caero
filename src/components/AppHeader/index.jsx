@@ -1,6 +1,7 @@
-import { Menu } from "antd"
+import { Menu, Typography } from "antd"
 import { HomeFilled } from "@ant-design/icons"
 import { useNavigate } from "react-router-dom"
+import AddCart from "../CartWidget"
 
 function AppHeader() {
     const navigate = useNavigate()
@@ -9,7 +10,9 @@ function AppHeader() {
     }
     return (
         <div className="header">
-            <Menu onClick={onMenuClick} mode="horizontal"
+            <Typography.Title>Allegro</Typography.Title>
+
+            <Menu className="appMenu" onClick={onMenuClick} mode="horizontal"
                 items={[{
                     label: <HomeFilled />,
                     key: "home"
@@ -29,7 +32,7 @@ function AppHeader() {
                         label: "Mens-Watches",
                         key: "mens-watches"
                     }
-                ]
+                    ]
                 }, {
                     label: "Women",
                     key: "women",
@@ -57,6 +60,7 @@ function AppHeader() {
                     }]
                 }
                 ]} />
+            <AddCart />
         </div>
     )
 }

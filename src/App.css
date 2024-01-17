@@ -7,18 +7,40 @@
 
 .header{
   height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 2px 2px #00000044;
+  z-index: 10;
 
+}
+
+.appMenu{
+  border: none;
+}
+
+.shopIcon{
+  font-size: 25px;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .footer{
   height: 60px;
   background-color: black;
-}
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
+}
+.productContainer{
+  padding: 8px;
+}
 .pagecontent{
   display: flex;
   flex: 1;
   overflow-y: auto;
+  background-color: #fafafa;
 }
 
 .itemCard{
@@ -28,5 +50,12 @@
 .itemCardImage{
   height: 250px !important;
   object-fit: scale-down;
+}
+
+.Spin{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 

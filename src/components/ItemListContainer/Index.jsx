@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/index"
 import { getAllProducts } from "../API"
-import { List, Image, Card, Typography, Rate} from "antd"
-import AddToCardButton from "../AddToCartButton";
-
-
+import { Spin } from "antd"
 
 
 function ItemListContainer(){
@@ -22,7 +19,10 @@ function ItemListContainer(){
         .catch(err => console.error("lpm", err))
 },[])
     
-        
+    if(loading){
+        return <Spin className="Spin" spinning/>
+    }        
+
     return(
             <ItemList items={items}/>
     )
