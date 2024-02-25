@@ -27,11 +27,14 @@ async function setUpDatabase() {
   await client.connect()
 
   // Check if the database exists
-  const res = await client.query(`SELECT datname FROM pg_catalog.pg_database WHERE datname = '${DB_NAME}'`);
+  const res = await client.query(
+    'SELECT datname FROM pg_catalog.pg_database WHERE datname = ?;',
+    [DB_NAME]
+  );
 
   if (res.rowCount === 0) {
     console.log(`${DB_NAME} database not found, creating it.`);
-    await client.query(`CREATE DATABASE "${DB_NAME}";`);
+    await client.query('CREATE DATABASE ?;', [DB_NAME]);
     console.log(`created database ${DB_NAME}.`);
   } else {
     console.log(`${DB_NAME} database already exists.`);
