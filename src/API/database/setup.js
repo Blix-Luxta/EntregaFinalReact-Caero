@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import pkg from 'pg';
 const { Client } = pkg;
 import * as dotenv from 'dotenv'
