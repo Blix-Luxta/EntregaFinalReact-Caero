@@ -47,7 +47,7 @@ export async function GetById(id) {
     );
 
     await client.end();
-    console.log(res)
+
     return res.rows;
 
   } catch (error) {
@@ -67,7 +67,7 @@ export async function CreateProduct({ title, description, price, category, brand
     );
 
     await client.end();
-    console.log(res)
+
     return res.rows;
 
   } catch (error) {
@@ -95,7 +95,7 @@ export async function UpdateProduct({ id, title, description, price, category, b
     );
 
     await client.end();
-    console.log(res)
+
     return res.rows;
 
   } catch (error) {
@@ -114,7 +114,7 @@ export async function DeleteProduct(id) {
     );
 
     await client.end();
-    console.log(res)
+
     return res.rows;
 
   } catch (error) {
